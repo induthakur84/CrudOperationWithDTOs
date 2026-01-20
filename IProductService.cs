@@ -6,7 +6,7 @@
     }
 }
 
-
+// Dependency Inversion Principle-> high level module should not depend on low level module both should depend on abstraction
 
 // O-Open-closed principle-> a class should be open for extension but closed for modification
 
