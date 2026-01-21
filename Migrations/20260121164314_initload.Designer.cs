@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CrudOperationWithDTOs.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20260119171738_initload")]
+    [Migration("20260121164314_initload")]
     partial class initload
     {
         /// <inheritdoc />
@@ -37,6 +37,13 @@ namespace CrudOperationWithDTOs.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Price")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ProductCode")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

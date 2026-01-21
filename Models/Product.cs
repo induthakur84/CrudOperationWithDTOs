@@ -5,14 +5,10 @@
         public int Id { get; set; }//1,2,3
         public string Name { get; set; }
         public string Description { get; set; }
-
-        public string ProductName { get; set; }
-
-
-
-
-       
-
+        //Add new field in the database
+        public int Price { get; set; }
+        //i added here mistakely
+        public string ProductCode { get; set; }
 
 
     }
@@ -26,7 +22,9 @@
 
 
 
-
+//student--
+//Profuct
+//order
 
 
 
