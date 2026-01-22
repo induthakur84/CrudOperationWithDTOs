@@ -1,4 +1,6 @@
 using CrudOperationWithDTOs;
+using CrudOperationWithDTOs.Services;
+using CrudOperationWithDTOs.Services.IServices;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +11,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ApplicationDbContext>(options=>
 options.UseSqlServer(builder.Configuration.GetConnectionString("Db"))    
 );
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddScoped<IProductService, ProductService>();
 // Add services to the container.
 
 builder.Services.AddControllers();

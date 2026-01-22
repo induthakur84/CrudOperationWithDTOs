@@ -61,6 +61,8 @@ namespace CrudOperationWithDTOs.Services
             return _mapper.Map<ProductReadAndUpdateDto>(product);
         }
 
+
+        //this is our query method
         public async Task<IEnumerable<ProductReadAndUpdateDto>> GetAll()
         {
             var products= await _context.Products.ToListAsync();

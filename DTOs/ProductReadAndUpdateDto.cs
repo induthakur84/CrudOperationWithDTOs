@@ -7,5 +7,6 @@
         public string Description { get; set; }
 
         public int Price { get; set; }
+        public string ProductCode { get; set; }
     }
 }
