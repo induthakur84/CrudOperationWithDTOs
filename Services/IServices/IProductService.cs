@@ -4,13 +4,6 @@ namespace CrudOperationWithDTOs.Services.IServices
 {
     public interface IProductService
     {
-
-
-
-        // async method and await keyword is used for asynchronous programming in C#
-        // 100- 0-10
-
-        //Get all products  
         Task<IEnumerable<ProductReadAndUpdateDto>> GetAll();   
 
         //Get Product by Id
@@ -22,8 +15,21 @@ namespace CrudOperationWithDTOs.Services.IServices
 
         Task<ProductReadAndUpdateDto> DeleteById(int id);
 
+      //  Task<bool> ProductExists(int id);
+      //  Task<bool> SaveChangesAsync();
+
     }
 }
+
+
+//interface segregation principle-> clients should not be forced to depend on methods they do not use
+// and we make small and specific interfaces rather than large interfaces
+
+
+
+
+
+
 
 //
 
